@@ -1,0 +1,527 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+xQueueRegistry      0x80              build/Source//queue.o
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 build/Application/main.o
+ .bss           0x0000000000000000        0x0 build/Application/main.o
+ .eh_frame      0x0000000000000000       0xc0 build/Application/main.o
+ .data          0x0000000000000000        0x0 build/Application/FreeRTOS_tick_config.o
+ .bss           0x0000000000000000        0x0 build/Application/FreeRTOS_tick_config.o
+ .eh_frame      0x0000000000000000       0x58 build/Application/FreeRTOS_tick_config.o
+ .text          0x0000000000000000      0x9a4 build/Source//event_groups.o
+ .data          0x0000000000000000        0x0 build/Source//event_groups.o
+ .bss           0x0000000000000000        0x0 build/Source//event_groups.o
+ .rodata        0x0000000000000000       0x17 build/Source//event_groups.o
+ .debug_info    0x0000000000000000      0x8d3 build/Source//event_groups.o
+ .debug_abbrev  0x0000000000000000      0x199 build/Source//event_groups.o
+ .debug_aranges
+                0x0000000000000000       0x30 build/Source//event_groups.o
+ .debug_line    0x0000000000000000      0x448 build/Source//event_groups.o
+ .debug_str     0x0000000000000000      0x5f0 build/Source//event_groups.o
+ .comment       0x0000000000000000       0x2c build/Source//event_groups.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//event_groups.o
+ .eh_frame      0x0000000000000000      0x190 build/Source//event_groups.o
+ .data          0x0000000000000000        0x0 build/Source//list.o
+ .bss           0x0000000000000000        0x0 build/Source//list.o
+ .eh_frame      0x0000000000000000       0x90 build/Source//list.o
+ .data          0x0000000000000000        0x0 build/Source//queue.o
+ .bss           0x0000000000000000        0x0 build/Source//queue.o
+ .eh_frame      0x0000000000000000      0x5c8 build/Source//queue.o
+ .text          0x0000000000000000     0x16d8 build/Source//stream_buffer.o
+ .data          0x0000000000000000        0x0 build/Source//stream_buffer.o
+ .bss           0x0000000000000000        0x0 build/Source//stream_buffer.o
+ .rodata        0x0000000000000000       0x18 build/Source//stream_buffer.o
+ .debug_info    0x0000000000000000      0xff6 build/Source//stream_buffer.o
+ .debug_abbrev  0x0000000000000000      0x1c9 build/Source//stream_buffer.o
+ .debug_aranges
+                0x0000000000000000       0x30 build/Source//stream_buffer.o
+ .debug_line    0x0000000000000000      0x7b8 build/Source//stream_buffer.o
+ .debug_str     0x0000000000000000      0x89a build/Source//stream_buffer.o
+ .comment       0x0000000000000000       0x2c build/Source//stream_buffer.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//stream_buffer.o
+ .eh_frame      0x0000000000000000      0x350 build/Source//stream_buffer.o
+ .eh_frame      0x0000000000000000      0x7d8 build/Source//tasks.o
+ .data          0x0000000000000000        0x0 build/Source//timers.o
+ .eh_frame      0x0000000000000000      0x3b8 build/Source//timers.o
+ .data          0x0000000000000000        0x0 build/Source//portable/MemMang/heap_4.o
+ .eh_frame      0x0000000000000000      0x120 build/Source//portable/MemMang/heap_4.o
+ .eh_frame      0x0000000000000000      0x128 build/Source//portable/GCC/ARM_AARCH64/port.o
+ .data          0x0000000000000000        0x0 build/Application/boot.o
+ .bss           0x0000000000000000        0x0 build/Application/boot.o
+ .text          0x0000000000000000        0x0 build/Application/vector.o
+ .data          0x0000000000000000        0x0 build/Application/vector.o
+ .bss           0x0000000000000000        0x0 build/Application/vector.o
+ .text          0x0000000000000000        0x0 build/Application/FreeRTOS_asm_vectors.o
+ .data          0x0000000000000000        0x0 build/Application/FreeRTOS_asm_vectors.o
+ .bss           0x0000000000000000        0x0 build/Application/FreeRTOS_asm_vectors.o
+ .data          0x0000000000000000        0x0 build/Source//portable/GCC/ARM_AARCH64/portASM.o
+ .bss           0x0000000000000000        0x0 build/Source//portable/GCC/ARM_AARCH64/portASM.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/aarch64-linux-gnu/lib/libc.so
+START GROUP
+LOAD /usr/aarch64-linux-gnu/lib/libc.so.6
+LOAD /usr/aarch64-linux-gnu/lib/libc_nonshared.a
+LOAD /usr/aarch64-linux-gnu/lib/ld-linux-aarch64.so.1
+END GROUP
+                0x0000000000001000                STACK_SIZE = 0x1000
+                0x0000000000000000                __start = .
+                0x0000000000000000                __text_start = .
+
+.text           0x0000000000000000     0xb858
+ *(.text.boot)
+ .text.boot     0x0000000000000000     0x1334 build/Application/vector.o
+                0x0000000000000000                vectors
+ *(.text.unlikely .text.unlikely.*)
+ *(.text.startup .text.startup.*)
+ *(.text .text.*)
+ .text          0x0000000000001334       0xa8 build/Application/main.o
+                0x0000000000001334                main
+                0x0000000000001350                vApplicationMallocFailedHook
+                0x0000000000001360                vApplicationStackOverflowHook
+                0x000000000000137c                vApplicationIdleHook
+                0x0000000000001384                vApplicationGetIdleTaskMemory
+                0x00000000000013a0                vApplicationGetTimerTaskMemory
+                0x00000000000013bc                vApplicationTickHook
+                0x00000000000013c4                vMainAssertCalled
+ .text          0x00000000000013dc       0x24 build/Application/FreeRTOS_tick_config.o
+                0x00000000000013dc                vConfigureTickInterrupt
+                0x00000000000013e4                vClearTickInterrupt
+                0x00000000000013ec                vApplicationIRQHandler
+ .text          0x0000000000001400      0x248 build/Source//list.o
+                0x0000000000001400                vListInitialise
+                0x0000000000001458                vListInitialiseItem
+                0x0000000000001474                vListInsertEnd
+                0x00000000000014f0                vListInsert
+                0x00000000000015bc                uxListRemove
+ .text          0x0000000000001648     0x2470 build/Source//queue.o
+                0x0000000000001648                xQueueGenericReset
+                0x00000000000017dc                xQueueGenericCreateStatic
+                0x00000000000018e0                xQueueGenericGetStaticBuffers
+                0x0000000000001988                xQueueGenericCreate
+                0x0000000000001b40                xQueueCreateMutex
+                0x0000000000001b80                xQueueCreateMutexStatic
+                0x0000000000001bcc                xQueueGetMutexHolder
+                0x0000000000001c34                xQueueGetMutexHolderFromISR
+                0x0000000000001c8c                xQueueGiveMutexRecursive
+                0x0000000000001d2c                xQueueTakeMutexRecursive
+                0x0000000000001dd8                xQueueCreateCountingSemaphoreStatic
+                0x0000000000001e6c                xQueueCreateCountingSemaphore
+                0x0000000000001ef4                xQueueGenericSend
+                0x00000000000021b4                xQueueGenericSendFromISR
+                0x00000000000023d8                xQueueGiveFromISR
+                0x00000000000025b0                xQueueReceive
+                0x00000000000027d8                xQueueSemaphoreTake
+                0x0000000000002a4c                xQueuePeek
+                0x0000000000002c7c                xQueueReceiveFromISR
+                0x0000000000002dfc                xQueuePeekFromISR
+                0x0000000000002ef4                uxQueueMessagesWaiting
+                0x0000000000002f3c                uxQueueSpacesAvailable
+                0x0000000000002f98                uxQueueMessagesWaitingFromISR
+                0x0000000000002fe0                vQueueDelete
+                0x000000000000303c                uxQueueGetQueueItemSize
+                0x0000000000003054                uxQueueGetQueueLength
+                0x0000000000003428                xQueueIsQueueEmptyFromISR
+                0x00000000000034cc                xQueueIsQueueFullFromISR
+                0x0000000000003530                vQueueAddToRegistry
+                0x0000000000003640                pcQueueGetName
+                0x00000000000036dc                vQueueUnregisterQueue
+                0x000000000000378c                vQueueWaitForMessageRestricted
+                0x0000000000003820                xQueueCreateSet
+                0x000000000000384c                xQueueAddToSet
+                0x00000000000038b4                xQueueRemoveFromSet
+                0x0000000000003924                xQueueSelectFromSet
+                0x0000000000003958                xQueueSelectFromSetFromISR
+ .text          0x0000000000003ab8     0x52d0 build/Source//tasks.o
+                0x0000000000003bc0                xTaskCreateStatic
+                0x0000000000003cfc                xTaskCreate
+                0x0000000000004174                vTaskDelete
+                0x000000000000437c                xTaskDelayUntil
+                0x00000000000044d4                vTaskDelay
+                0x0000000000004548                eTaskGetState
+                0x00000000000046e8                uxTaskPriorityGet
+                0x0000000000004738                uxTaskPriorityGetFromISR
+                0x0000000000004794                uxTaskBasePriorityGet
+                0x00000000000047e4                uxTaskBasePriorityGetFromISR
+                0x0000000000004840                vTaskPrioritySet
+                0x0000000000004b60                vTaskSuspend
+                0x0000000000004e1c                vTaskResume
+                0x0000000000004fe0                xTaskResumeFromISR
+                0x0000000000005314                vTaskStartScheduler
+                0x00000000000053b8                vTaskEndScheduler
+                0x0000000000005428                vTaskSuspendAll
+                0x000000000000544c                xTaskResumeAll
+                0x00000000000057e8                xTaskGetTickCount
+                0x0000000000005808                xTaskGetTickCountFromISR
+                0x0000000000005834                uxTaskGetNumberOfTasks
+                0x0000000000005844                pcTaskGetName
+                0x00000000000059b8                xTaskGetHandle
+                0x0000000000005ae0                xTaskGetStaticBuffers
+                0x0000000000005bcc                xTaskCatchUpTicks
+                0x0000000000005c3c                xTaskAbortDelay
+                0x0000000000005e28                xTaskIncrementTick
+                0x0000000000006270                vTaskSwitchContext
+                0x000000000000643c                vTaskPlaceOnEventList
+                0x000000000000649c                vTaskPlaceOnUnorderedEventList
+                0x00000000000065b4                vTaskPlaceOnEventListRestricted
+                0x00000000000066a4                xTaskRemoveFromEventList
+                0x00000000000069c8                vTaskRemoveFromUnorderedEventList
+                0x0000000000006c78                vTaskSetTimeOutState
+                0x0000000000006cdc                vTaskInternalSetTimeOutState
+                0x0000000000006d18                xTaskCheckForTimeOut
+                0x0000000000006e74                vTaskMissedYield
+                0x00000000000070e0                xTaskGetCurrentTaskHandle
+                0x0000000000007100                xTaskGetCurrentTaskHandleForCore
+                0x0000000000007140                xTaskGetSchedulerState
+                0x0000000000007194                xTaskPriorityInherit
+                0x0000000000007418                xTaskPriorityDisinherit
+                0x0000000000007660                vTaskPriorityDisinheritAfterTimeout
+                0x0000000000007908                uxTaskResetEventItemValue
+                0x0000000000007954                pvTaskIncrementMutexHeldCount
+                0x0000000000007994                ulTaskGenericNotifyTake
+                0x0000000000007b1c                xTaskGenericNotifyWait
+                0x0000000000007d08                xTaskGenericNotify
+                0x0000000000008114                xTaskGenericNotifyFromISR
+                0x00000000000085e8                vTaskGenericNotifyGiveFromISR
+                0x0000000000008954                xTaskGenericNotifyStateClear
+                0x00000000000089f4                ulTaskGenericNotifyValueClear
+                0x0000000000008cc4                vTaskResetState
+ .text          0x0000000000008d88     0x10bc build/Source//timers.o
+                0x0000000000008d88                xTimerCreateTimerTask
+                0x0000000000008e4c                xTimerCreate
+                0x0000000000008eb0                xTimerCreateStatic
+                0x0000000000009008                xTimerGenericCommandFromTask
+                0x00000000000090f4                xTimerGenericCommandFromISR
+                0x00000000000091b0                xTimerGetTimerDaemonTaskHandle
+                0x00000000000091f0                xTimerGetPeriod
+                0x0000000000009230                vTimerSetReloadMode
+                0x00000000000092b8                xTimerGetReloadMode
+                0x0000000000009320                uxTimerGetReloadMode
+                0x0000000000009344                xTimerGetExpiryTime
+                0x000000000000938c                xTimerGetStaticBuffer
+                0x00000000000093fc                pcTimerGetName
+                0x0000000000009c2c                xTimerIsTimerActive
+                0x0000000000009c94                pvTimerGetTimerID
+                0x0000000000009ce4                vTimerSetTimerID
+                0x0000000000009d38                xTimerPendFunctionCallFromISR
+                0x0000000000009d9c                xTimerPendFunctionCall
+                0x0000000000009e24                vTimerResetState
+ .text          0x0000000000009e44      0xa84 build/Source//portable/MemMang/heap_4.o
+                0x0000000000009e44                pvPortMalloc
+                0x000000000000a228                vPortFree
+                0x000000000000a394                xPortGetFreeHeapSize
+                0x000000000000a3a4                xPortGetMinimumEverFreeHeapSize
+                0x000000000000a3b4                vPortInitialiseBlocks
+                0x000000000000a3bc                pvPortCalloc
+                0x000000000000a748                vPortGetHeapStats
+                0x000000000000a884                vPortHeapResetState
+ .text          0x000000000000a8c8      0x84c build/Source//portable/GCC/ARM_AARCH64/port.o
+                0x000000000000a8c8                pxPortInitialiseStack
+                0x000000000000acbc                xPortStartScheduler
+                0x000000000000adf4                vPortEndScheduler
+                0x000000000000ae2c                vPortEnterCritical
+                0x000000000000ae98                vPortExitCritical
+                0x000000000000af14                FreeRTOS_Tick_Handler
+                0x000000000000afe8                vPortTaskUsesFPU
+                0x000000000000b000                vPortClearInterruptMask
+                0x000000000000b050                uxPortSetInterruptMask
+                0x000000000000b0b4                vPortValidateInterruptPriority
+ *fill*         0x000000000000b114        0x4 
+ .text          0x000000000000b118       0x38 build/Application/boot.o
+                0x000000000000b118                _start
+ *fill*         0x000000000000b150       0xb0 
+ .text          0x000000000000b200      0x658 build/Source//portable/GCC/ARM_AARCH64/portASM.o
+                0x000000000000b200                FreeRTOS_SWI_Handler
+                0x000000000000b400                vPortRestoreTaskContext
+                0x000000000000b500                FreeRTOS_IRQ_Handler
+ *(.gnu.linkonce.t.*)
+ *(.text)
+
+.plt            0x000000000000b858       0x50
+ .plt           0x000000000000b858       0x50 /usr/aarch64-linux-gnu/lib/libc.so.6
+                0x000000000000b878                memcpy@@GLIBC_2.17
+                0x000000000000b888                strlen@@GLIBC_2.17
+                0x000000000000b898                memset@@GLIBC_2.17
+
+.iplt           0x000000000000b8a8        0x0
+ .iplt          0x000000000000b8a8        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.gnu.version_d  0x000000000000b8a8        0x0
+ .gnu.version_d
+                0x000000000000b8a8        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.gnu.version    0x000000000000b8a8        0x8
+ .gnu.version   0x000000000000b8a8        0x8 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.gnu.version_r  0x000000000000b8b0       0x20
+ .gnu.version_r
+                0x000000000000b8b0       0x20 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.dynsym         0x000000000000b8d0       0x60
+ .dynsym        0x000000000000b8d0       0x60 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.dynstr         0x000000000000b930       0x2b
+ .dynstr        0x000000000000b930       0x2b /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.hash           0x000000000000b960       0x24
+ .hash          0x000000000000b960       0x24 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.gnu.hash       0x000000000000b988       0x1c
+ .gnu.hash      0x000000000000b988       0x1c /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.rodata         0x000000000000b9a8       0xc8
+ .rodata        0x000000000000b9a8       0x10 build/Source//queue.o
+ .rodata        0x000000000000b9b8       0x15 build/Source//tasks.o
+ *fill*         0x000000000000b9cd        0x3 
+ .rodata        0x000000000000b9d0       0x25 build/Source//timers.o
+ *fill*         0x000000000000b9f5        0x3 
+ .rodata        0x000000000000b9f8       0x2a build/Source//portable/MemMang/heap_4.o
+ *fill*         0x000000000000ba22        0x6 
+ .rodata        0x000000000000ba28       0x48 build/Source//portable/GCC/ARM_AARCH64/port.o
+                0x000000000000ba28                ullICCEOIR
+                0x000000000000ba30                ullICCIAR
+                0x000000000000ba38                ullICCPMR
+                0x000000000000ba40                ullMaxAPIPriorityMask
+
+.vectors        0x000000000000ba70     0x1800
+ .vectors       0x000000000000ba70     0x1800 build/Application/FreeRTOS_asm_vectors.o
+                0x000000000000ba70                _vector_table
+                0x000000000000ca70                _freertos_vector_table
+
+.rela.dyn       0x000000000000d270       0x48
+ .rela.got      0x000000000000d270        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+ .rela.plt      0x000000000000d270       0x48 /usr/aarch64-linux-gnu/lib/libc.so.6
+ .rela.bss      0x000000000000d2b8        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+ .rela.data.rel.ro
+                0x000000000000d2b8        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+ .rela.iplt     0x000000000000d2b8        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+ .rela.text     0x000000000000d2b8        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+                0x000000000000d2c0                . = ALIGN (0x10)
+                0x000000000000d2c0                __text_end = .
+                0x000000000000d2c0                __data_start = .
+
+.data           0x000000000000d2c0       0x10
+                0x000000000000d2c0                . = ALIGN (0x8)
+ *(.data .data.*)
+ .data.rel.ro   0x000000000000d2c0        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+ .data          0x000000000000d2c0        0x8 build/Source//tasks.o
+ .data          0x000000000000d2c8        0x8 build/Source//portable/GCC/ARM_AARCH64/port.o
+                0x000000000000d2c8                ullCriticalNesting
+ *(.gnu.linkonce.d.*)
+                0x000000000000d2d0                . = ALIGN (0x8)
+                [!provide]                        PROVIDE (__global_pointer$ = (. + 0x800))
+ *(.sdata .sdata.*)
+ *(.sdata2 .sdata2.*)
+ *(.gnu.linkonce.s.*)
+                0x000000000000d2d0                . = ALIGN (0x8)
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+                0x000000000000d2d0                . = ALIGN (0x4)
+                0x000000000000d2d0                _edata = .
+
+.dynamic        0x000000000000d2d0      0x150
+ .dynamic       0x000000000000d2d0      0x150 /usr/aarch64-linux-gnu/lib/libc.so.6
+                0x000000000000d2d0                _DYNAMIC
+
+.got            0x000000000000d420       0x38
+ .got           0x000000000000d420       0x38 /usr/aarch64-linux-gnu/lib/libc.so.6
+                0x000000000000d420                _GLOBAL_OFFSET_TABLE_
+
+.got.plt        0x000000000000d458       0x30
+ .got.plt       0x000000000000d458       0x30 /usr/aarch64-linux-gnu/lib/libc.so.6
+
+.igot.plt       0x000000000000d488        0x0
+ .igot.plt      0x000000000000d488        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+                0x000000000000d490                . = ALIGN (0x10)
+                0x000000000000d490                __data_end = .
+                0x000000000000d490                __bss_start = .
+
+.bss            0x000000000000d490    0x1f500
+ *(.sbss*)
+ *(.gnu.linkonce.sb.*)
+ *(.bss .bss.*)
+ .bss           0x000000000000d490      0x280 build/Source//tasks.o
+                0x000000000000d490                pxCurrentTCB
+ .bss           0x000000000000d710      0x1b0 build/Source//timers.o
+ .bss           0x000000000000d8c0    0x1f038 build/Source//portable/MemMang/heap_4.o
+ .bss           0x000000000002c8f8       0x18 build/Source//portable/GCC/ARM_AARCH64/port.o
+                0x000000000002c8f8                ullPortTaskHasFPUContext
+                0x000000000002c900                ullPortYieldRequired
+                0x000000000002c908                ullPortInterruptNesting
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+ COMMON         0x000000000002c910       0x80 build/Source//queue.o
+                0x000000000002c910                xQueueRegistry
+                0x000000000002c990                . = ALIGN (0x4)
+                0x000000000002c990                _ebss = .
+
+.dynbss         0x000000000002c990        0x0
+ .dynbss        0x000000000002c990        0x0 /usr/aarch64-linux-gnu/lib/libc.so.6
+                0x000000000002c990                . = ALIGN (0x10)
+                0x000000000002c990                __bss_end = .
+                0x000000000002c990                __end = .
+
+.stack          0x000000000002c990     0x1000
+                0x000000000002c990                . = ALIGN (0x10)
+                0x000000000002d990                . = (. + STACK_SIZE)
+ *fill*         0x000000000002c990     0x1000 
+                0x000000000002d990                __stack_top = .
+                0x0000000000003ea0                __bss_size = ((__bss_end - __bss_start) >> 0x3)
+LOAD build/Application/main.o
+LOAD build/Application/FreeRTOS_tick_config.o
+LOAD build/Source//event_groups.o
+LOAD build/Source//list.o
+LOAD build/Source//queue.o
+LOAD build/Source//stream_buffer.o
+LOAD build/Source//tasks.o
+LOAD build/Source//timers.o
+LOAD build/Source//portable/MemMang/heap_4.o
+LOAD build/Source//portable/GCC/ARM_AARCH64/port.o
+LOAD build/Application/boot.o
+LOAD build/Application/vector.o
+LOAD build/Application/FreeRTOS_asm_vectors.o
+LOAD build/Source//portable/GCC/ARM_AARCH64/portASM.o
+OUTPUT(build/RTOSDemo.elf elf64-littleaarch64)
+LOAD linker stubs
+
+.debug_info     0x0000000000000000     0x674b
+ .debug_info    0x0000000000000000      0x65e build/Application/main.o
+ .debug_info    0x000000000000065e       0xf5 build/Application/FreeRTOS_tick_config.o
+ .debug_info    0x0000000000000753      0x2f8 build/Source//list.o
+ .debug_info    0x0000000000000a4b     0x1968 build/Source//queue.o
+ .debug_info    0x00000000000023b3     0x26cd build/Source//tasks.o
+ .debug_info    0x0000000000004a80     0x1337 build/Source//timers.o
+ .debug_info    0x0000000000005db7      0x504 build/Source//portable/MemMang/heap_4.o
+ .debug_info    0x00000000000062bb      0x3d8 build/Source//portable/GCC/ARM_AARCH64/port.o
+ .debug_info    0x0000000000006693       0x2e build/Application/boot.o
+ .debug_info    0x00000000000066c1       0x2e build/Application/vector.o
+ .debug_info    0x00000000000066ef       0x2e build/Application/FreeRTOS_asm_vectors.o
+ .debug_info    0x000000000000671d       0x2e build/Source//portable/GCC/ARM_AARCH64/portASM.o
+
+.debug_abbrev   0x0000000000000000      0xd5b
+ .debug_abbrev  0x0000000000000000      0x171 build/Application/main.o
+ .debug_abbrev  0x0000000000000171       0x80 build/Application/FreeRTOS_tick_config.o
+ .debug_abbrev  0x00000000000001f1       0xe8 build/Source//list.o
+ .debug_abbrev  0x00000000000002d9      0x248 build/Source//queue.o
+ .debug_abbrev  0x0000000000000521      0x277 build/Source//tasks.o
+ .debug_abbrev  0x0000000000000798      0x24f build/Source//timers.o
+ .debug_abbrev  0x00000000000009e7      0x1aa build/Source//portable/MemMang/heap_4.o
+ .debug_abbrev  0x0000000000000b91      0x17a build/Source//portable/GCC/ARM_AARCH64/port.o
+ .debug_abbrev  0x0000000000000d0b       0x14 build/Application/boot.o
+ .debug_abbrev  0x0000000000000d1f       0x14 build/Application/vector.o
+ .debug_abbrev  0x0000000000000d33       0x14 build/Application/FreeRTOS_asm_vectors.o
+ .debug_abbrev  0x0000000000000d47       0x14 build/Source//portable/GCC/ARM_AARCH64/portASM.o
+
+.debug_aranges  0x0000000000000000      0x240
+ .debug_aranges
+                0x0000000000000000       0x30 build/Application/main.o
+ .debug_aranges
+                0x0000000000000030       0x30 build/Application/FreeRTOS_tick_config.o
+ .debug_aranges
+                0x0000000000000060       0x30 build/Source//list.o
+ .debug_aranges
+                0x0000000000000090       0x30 build/Source//queue.o
+ .debug_aranges
+                0x00000000000000c0       0x30 build/Source//tasks.o
+ .debug_aranges
+                0x00000000000000f0       0x30 build/Source//timers.o
+ .debug_aranges
+                0x0000000000000120       0x30 build/Source//portable/MemMang/heap_4.o
+ .debug_aranges
+                0x0000000000000150       0x30 build/Source//portable/GCC/ARM_AARCH64/port.o
+ .debug_aranges
+                0x0000000000000180       0x30 build/Application/boot.o
+ .debug_aranges
+                0x00000000000001b0       0x30 build/Application/vector.o
+ .debug_aranges
+                0x00000000000001e0       0x30 build/Application/FreeRTOS_asm_vectors.o
+ .debug_aranges
+                0x0000000000000210       0x30 build/Source//portable/GCC/ARM_AARCH64/portASM.o
+
+.debug_line     0x0000000000000000     0x364f
+ .debug_line    0x0000000000000000      0x1d4 build/Application/main.o
+ .debug_line    0x00000000000001d4       0x9e build/Application/FreeRTOS_tick_config.o
+ .debug_line    0x0000000000000272      0x1a2 build/Source//list.o
+ .debug_line    0x0000000000000414      0xe26 build/Source//queue.o
+ .debug_line    0x000000000000123a     0x141b build/Source//tasks.o
+ .debug_line    0x0000000000002655      0x606 build/Source//timers.o
+ .debug_line    0x0000000000002c5b      0x479 build/Source//portable/MemMang/heap_4.o
+ .debug_line    0x00000000000030d4      0x30b build/Source//portable/GCC/ARM_AARCH64/port.o
+ .debug_line    0x00000000000033df       0x50 build/Application/boot.o
+ .debug_line    0x000000000000342f       0xc2 build/Application/vector.o
+ .debug_line    0x00000000000034f1       0x98 build/Application/FreeRTOS_asm_vectors.o
+ .debug_line    0x0000000000003589       0xc6 build/Source//portable/GCC/ARM_AARCH64/portASM.o
+
+.debug_str      0x0000000000000000     0x27cb
+ .debug_str     0x0000000000000000      0x4fb build/Application/main.o
+                                        0x577 (size before relaxing)
+ .debug_str     0x00000000000004fb       0x6f build/Application/FreeRTOS_tick_config.o
+                                        0x194 (size before relaxing)
+ .debug_str     0x000000000000056a      0x12d build/Source//list.o
+                                        0x28a (size before relaxing)
+ .debug_str     0x0000000000000697      0x8b9 build/Source//queue.o
+                                        0xb99 (size before relaxing)
+ .debug_str     0x0000000000000f50      0xd49 build/Source//tasks.o
+                                       0x119f (size before relaxing)
+ .debug_str     0x0000000000001c99      0x5d5 build/Source//timers.o
+                                        0xa77 (size before relaxing)
+ .debug_str     0x000000000000226e      0x2e4 build/Source//portable/MemMang/heap_4.o
+                                        0x469 (size before relaxing)
+ .debug_str     0x0000000000002552      0x1f7 build/Source//portable/GCC/ARM_AARCH64/port.o
+                                        0x3b5 (size before relaxing)
+ .debug_str     0x0000000000002749       0x1f build/Application/boot.o
+                                         0x35 (size before relaxing)
+ .debug_str     0x0000000000002768       0x15 build/Application/vector.o
+                                         0x37 (size before relaxing)
+ .debug_str     0x000000000000277d       0x23 build/Application/FreeRTOS_asm_vectors.o
+                                         0x45 (size before relaxing)
+ .debug_str     0x00000000000027a0       0x2b build/Source//portable/GCC/ARM_AARCH64/portASM.o
+                                         0x4d (size before relaxing)
+
+.comment        0x0000000000000000       0x2b
+ .comment       0x0000000000000000       0x2b build/Application/main.o
+                                         0x2c (size before relaxing)
+ .comment       0x000000000000002b       0x2c build/Application/FreeRTOS_tick_config.o
+ .comment       0x000000000000002b       0x2c build/Source//list.o
+ .comment       0x000000000000002b       0x2c build/Source//queue.o
+ .comment       0x000000000000002b       0x2c build/Source//tasks.o
+ .comment       0x000000000000002b       0x2c build/Source//timers.o
+ .comment       0x000000000000002b       0x2c build/Source//portable/MemMang/heap_4.o
+ .comment       0x000000000000002b       0x2c build/Source//portable/GCC/ARM_AARCH64/port.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Application/main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Application/FreeRTOS_tick_config.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//list.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//queue.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//tasks.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//timers.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//portable/MemMang/heap_4.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/Source//portable/GCC/ARM_AARCH64/port.o
+
+.debug_ranges   0x0000000000000000       0x40
+ .debug_ranges  0x0000000000000000       0x40 build/Source//tasks.o
